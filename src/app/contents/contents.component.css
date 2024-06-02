@@ -1,0 +1,132 @@
+.separation {
+    height: 50px;
+    margin-bottom: 50px;
+}
+.header{
+    margin: 0 auto;
+}
+.header p{
+    color: #A2A19F;
+}
+.first, .second{
+    background-color: #EFEFEF;
+    /* height: 100px; */
+}
+.first img, .second img {
+    height: 150px;
+    width: 300px;
+    /* background-color: green; */
+    margin: 0 auto;
+}
+.buy{
+    border: none;
+}
+.bigger{
+    background-color: #EFEFEF;
+    width: 60%  !important;
+}
+.bigger img{
+    height: 410px;
+    width: 500px;
+}
+.text{
+    /* text-align: center; */
+    align-items: center;
+}
+.s-button{
+    width: 150px;
+}
+/* .products{
+    background-color: yellow;
+} */
+.none{
+    color: #C87065;
+    background-color: #C87065;
+    width: 70px;
+    height: 5px;
+    margin: 0 auto;
+}
+.productsItems{
+    /* background-color: green; */
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+.productsItems img{
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    transition: 1s ease;
+}
+.card{
+    border: none;
+}
+.card:hover img{
+    transform: scale(1.1);   
+}
+.s-span{
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.374);
+}
+.side-img{
+    width: 80%;
+    margin: 0 auto;
+    background-color: red;
+}
+.side-img img{
+    width: 100%;
+}
+.grid{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+.f-Item{
+    color: #C87065;
+    border: 2px solid #C87065;
+    font-size: 15px;
+    font-weight: bold;
+    height: 40px;
+    width: 30px;
+    align-items: center;
+}
+.s-Item{
+    color: #C87065;
+    font-size: 12px;
+    /* border: 1px solid red; */
+}
+.t-Item{
+    font-size: 13px;
+    line-height: 3px;
+    /* border: 1px solid black; */
+}
+.cardImg img{
+    transition: 1s ease;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.cardImg:hover img{
+    transform: scale(1.1);   
+}
+.spann i, .spann p{
+    font-size: 12px;
+}
+.text{
+    /* background-color: #C87065; */
+    width: 300px;
+}
+.secondItem{
+    width: 100% ;
+    /* background-color: purple; */
+}
+.para{
+    font-size: 14px;
+}
+.btn{
+    border: none;
+    color: #C87065;
+}
