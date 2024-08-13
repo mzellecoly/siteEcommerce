@@ -1,0 +1,107 @@
+<!-- <i class="fa-solid fa-house home mt-4 ml-3" style="color: #C87065; font-size: 25px; cursor: pointer;" [routerLink]="['/home']"></i>
+<p>vendeur works!</p>
+  
+   -->
+   <nav>
+    <div class="logo-name">
+        <div class="logo-image">
+           <img src="images/logo.png" alt="">
+        </div>
+        <span class="logo_name">CodingLab</span>
+    </div>
+    <div class="menu-items">
+        <ul class="nav-links">
+            <li><a [routerLink]="['/vendeur']">
+                <i class="uil uil-estate"></i>
+                <span class="link-name">Dahsboard</span>
+            </a></li>
+            <li><a [routerLink]="['/produit']">
+                <i class="uil uil-files-landscapes"></i>
+                <span class="link-name">Produits</span>
+            </a></li>
+            <li><a [routerLink]="['/boutique']">
+                <i class="uil uil-chart"></i>
+                <span class="link-name">Boutiques</span>
+            </a></li>
+            <li><a [routerLink]="['/categorie']">
+                <i class="uil uil-thumbs-up"></i>
+                <span class="link-name">Catégorie</span>
+            </a></li>
+            <li><a href="#">
+                <i class="uil uil-comments"></i>
+                <span class="link-name">Comment</span>
+            </a></li>
+            <li><a href="#">
+                <i class="uil uil-share"></i>
+                <span class="link-name">Share</span>
+            </a></li>
+        </ul>
+        
+        <ul class="logout-mode">
+            <li><a href="#">
+                <i class="uil uil-signout"></i>
+                <span class="link-name">Logout</span>
+            </a></li>
+            <li class="mode">
+                <a href="#">
+                    <i class="uil uil-moon"></i>
+                <span class="link-name">Dark Mode</span>
+            </a>
+            <div class="mode-toggle">
+              <span class="switch"></span>
+            </div>
+        </li>
+        </ul>
+    </div>
+</nav>
+<section class="dashboard">
+    <div class="top">
+        <i class="uil uil-bars sidebar-toggle"></i>
+        <div class="search-box">
+            <i class="uil uil-search"></i>
+            <input type="text" placeholder="Search here...">
+        </div>
+        <img src="https://img.freepik.com/psd-gratuit/rendu-3d-du-personnage-avatar_23-2150611713.jpg?ga=GA1.1.997396323.1693780365&semt=ais_hybrid" alt="">
+    </div>
+    <div class="dash-content">
+        <div class="grid-contain-form">
+            <div class="table-data">
+                <div class="order">
+                    <form>
+                        <h5 class="fw-bold text-center mb-5">Ajout Compétence</h5>
+                        <div class="mb-3">
+                            <label for="categorie" class="form-label">Nom compétence</label>
+                            <input type="email" class="form-control input-categorie rounded-0 " id="categorie" aria-describedby="categorie" name="nom" [(ngModel)]="nom">
+                        </div>
+                        <button type="submit" class="btn btn-ajout d-block m-auto" (click)="ajoutCategorie()">Ajouter</button>
+                    </form>
+                </div>
+            </div>
+            <div class="table-data">
+                <div class="order">
+                    <h4 class="fw-bold ">Liste des Catégorie</h4>
+                    <table class="table table-responsive-md table1 table-sm px-5 py-5 table table-with-padding " id="table-list">
+                        <thead >
+                            <tr class="h-25 px-2 py-3" style="background-color: red;">
+                                <th scope="col" >Nom Catégorie</th>
+                                <th scope="col" >Action </th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                        <tr *ngFor="let categorie of listeCategories">
+                            <td>{{categorie.nom}}</td>
+                            <td id="iconAction">
+                                <i class="bi bi-trash3-fill" title="Supprimer la compétence" (click)="supprimerCategorie(categorie.nom)"></i>
+                            </td>
+                        </tr>
+          
+                        </tbody>
+                    </table>
+          
+                </div>
+            </div>
+          
+          </div>
+          
+    </div>
+</section>

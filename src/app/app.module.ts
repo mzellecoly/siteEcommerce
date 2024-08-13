@@ -8,6 +8,12 @@ import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { ContentsComponent } from './contents/contents.component';
+import { AuthComponent } from './auth/auth.component';
+import { FormsModule } from '@angular/forms';
+import { VendeurComponent } from './vendeur/vendeur.component';
+import { ClientComponent } from './client/client.component';
+import { ProduitVendeurComponent } from './produit-vendeur/produit-vendeur.component';
+import { CategorieComponent } from './categorie/categorie.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +21,18 @@ import { ContentsComponent } from './contents/contents.component';
     AccueilComponent,
     FooterComponent,
     HeaderComponent,
-    ContentsComponent
+    ContentsComponent,
+    AuthComponent,
+    VendeurComponent,
+    ClientComponent,
+    ProduitVendeurComponent,
+    CategorieComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

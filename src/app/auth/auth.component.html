@@ -1,0 +1,66 @@
+	<!-- <div class="">
+        <i class="fa-solid fa-house home mt-4 ml-3" style="color: #C87065; font-size: 25px; cursor: pointer;" [routerLink]="['/home']"></i>
+        <h2 class="text-center">Bienvenue utilisateur !!!</h2>
+    </div>
+    <div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="signup">
+				<form>
+                    <h5 class="text-center mt-5">Veuillez vous inscrire !!!</h5>
+					<input type="text" name="nom_complet" placeholder="Nom complet" required="" [(ngModel)]="nom_complet">
+					<input type="email" name="email" placeholder="Adresse email" required="" [(ngModel)]="email">
+                    <input type="number" name="telephone" placeholder="Téléphone" required="" [(ngModel)]="telephone">
+					<input type="text" name="role" placeholder="Role" required="" [(ngModel)]="role">
+					<input type="password" name="mot_de_passe" placeholder="Mot de passe" required="" [(ngModel)]="mot_de_passe">
+					<button (click)="inscriptionUser()">S'inscrire</button>
+				</form>
+			</div>
+
+			<div class="login">
+				<form>
+					<label for="chk" aria-hidden="true">Se connecter</label>
+					<input type="email" name="email" placeholder="Adresse email" required="">
+					<input type="password" name="pswd" placeholder="Mot de passe" required="">
+					<button>Se connecter</button>
+				</form>
+			</div>
+	</div> -->
+	<div class="">
+		<i class="fa-solid fa-house home mt-4 ml-3" style="color: #C87065; font-size: 25px; cursor: pointer;" [routerLink]="['/home']"></i>
+		<h2 class="text-center">Bienvenue utilisateur !!!</h2>
+	</div>
+	<div class="main">
+		<input type="checkbox" id="chk" aria-hidden="true">
+		
+		<div class="signup">
+			<form (ngSubmit)="inscriptionUser()">
+				<h5 class="text-center mt-5">Veuillez vous inscrire !!!</h5>
+				<input type="text" name="nom_complet" placeholder="Nom complet" required [(ngModel)]="nom_complet">
+				<div *ngIf="verifNom" class="error">{{ verifNom }}</div>
+				
+				<input type="email" name="email" placeholder="Adresse email" required [(ngModel)]="email">
+				<div *ngIf="verifEmail" class="error">{{ verifEmail }}</div>
+				
+				<input type="number" name="telephone" placeholder="Téléphone" required [(ngModel)]="telephone">
+				<div *ngIf="verifTelephone" class="error">{{ verifTelephone }}</div>
+				
+				<input type="text" name="role" placeholder="Role" required [(ngModel)]="role">
+				
+				<input type="password" name="mot_de_passe" placeholder="Mot de passe" required [(ngModel)]="mot_de_passe">
+				<div *ngIf="verifPassword" class="error">{{ verifPassword }}</div>
+				
+				<button type="submit">S'inscrire</button>
+			</form>
+		</div>
+		
+		<div class="login">
+			<form (ngSubmit)="connexionUser()">
+				<label for="chk" aria-hidden="true">Se connecter</label>
+				<input type="email" name="email" placeholder="Adresse email" required [(ngModel)]="emailConnexion">
+				<input type="password" name="pswd" placeholder="Mot de passe" required [(ngModel)]="motDePasseConnexion">
+				<button type="submit">Se connecter</button>
+			</form>
+		</div>
+	</div>
+	

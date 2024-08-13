@@ -1,0 +1,117 @@
+<!-- <i class="fa-solid fa-house home mt-4 ml-3" style="color: #C87065; font-size: 25px; cursor: pointer;" [routerLink]="['/home']"></i>
+<p>vendeur works!</p>
+  
+   -->
+<nav>
+    <div class="logo-name">
+        <div class="logo-image">
+           <img src="images/logo.png" alt="">
+        </div>
+        <span class="logo_name">CodingLab</span>
+    </div>
+    <div class="menu-items">
+        <ul class="nav-links">
+            <li><a [routerLink]="['/vendeur']">
+                <i class="uil uil-estate"></i>
+                <span class="link-name">Dahsboard</span>
+            </a></li>
+            <li><a [routerLink]="['/produit']">
+                <i class="uil uil-files-landscapes"></i>
+                <span class="link-name">Produits</span>
+            </a></li>
+            <li><a [routerLink]="['/boutique']">
+                <i class="uil uil-chart"></i>
+                <span class="link-name">Boutiques</span>
+            </a></li>
+            <li><a [routerLink]="['/categorie']">
+                <i class="uil uil-thumbs-up"></i>
+                <span class="link-name">Catégorie</span>
+            </a></li>
+            <li><a href="#">
+                <i class="uil uil-comments"></i>
+                <span class="link-name">Comment</span>
+            </a></li>
+            <li><a href="#">
+                <i class="uil uil-share"></i>
+                <span class="link-name">Share</span>
+            </a></li>
+        </ul>
+        
+        <ul class="logout-mode">
+            <li><a href="#">
+                <i class="uil uil-signout"></i>
+                <span class="link-name">Logout</span>
+            </a></li>
+            <li class="mode">
+                <a href="#">
+                    <i class="uil uil-moon"></i>
+                <span class="link-name">Dark Mode</span>
+            </a>
+            <div class="mode-toggle">
+              <span class="switch"></span>
+            </div>
+        </li>
+        </ul>
+    </div>
+</nav>
+<section class="dashboard">
+    <div class="top">
+        <i class="uil uil-bars sidebar-toggle"></i>
+        <div class="search-box">
+            <i class="uil uil-search"></i>
+            <input type="text" placeholder="Search here...">
+        </div>
+        <img src="https://img.freepik.com/psd-gratuit/rendu-3d-du-personnage-avatar_23-2150611713.jpg?ga=GA1.1.997396323.1693780365&semt=ais_hybrid" alt="">
+    </div>
+    <div class="dash-content">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btnAjout" data-bs-toggle="modal" data-bs-target="#exampleModal">
+           Ajouter
+        </button>
+    </div>
+</section>
+<!-- PopUp ajout -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Ajouter un produit</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3 inputAjout">
+            <label for="exampleFormControlInput1" class="form-label">Nom</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nom produit" name="nomProduit">
+            <!-- <span class="text-danger" *ngIf="!exactNom">{{verifNom}}</span>
+            <span class="text-success" *ngIf="exactNom"><i class="bi bi-check2-all"></i> Exact !</span> -->
+          </div>
+          <div class="mb-3 inputAjout">
+            <select class="form-select" aria-label="Default select example" name="categorie" [(ngModel)]="categorie_id">
+              <option selected>Selectionner une categorie</option>
+              <option *ngFor="let categorie of listeCategories" [value]="categorie.id">{{ categorie.nom }}</option>
+          </select>
+          </div>
+          <div class="mb-3 inputAjout">
+            <label for="exampleFormControlInput1" class="form-label">Descriptions</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre de Participants" name="nombre_de_participant">
+          </div>
+          <div class="mb-3 inputAjout">
+            <label for="exampleFormControlInput1" class="form-label">Prix</label>
+            <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Date" name="date_limite">
+            <!-- <span class="text-danger" *ngIf="!exactDate">{{verifDate}}</span>
+            <span class="text-success" *ngIf="exactDate"><i class="bi bi-check2-all"></i> Exact !</span> -->
+          </div>
+          <div class="mb-3 inputAjout">
+            <label for="exampleFormControlInput1" class="form-label">Photo</label>
+            <input class="form-control" type="file">
+            <!-- <span class="text-danger" *ngIf="!exactDescription">{{verifDescription}}</span>
+            <span class="text-success" *ngIf="exactDescription"><i class="bi bi-check2-all"></i> Exact !</span> -->
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+          <button type="button" class="btn btnAjout" data-bs-dismiss="modal">Ajouter</button>
+        </div>
+      </div>
+    </div>
+  </div>
